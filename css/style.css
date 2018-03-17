@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.page{
+    margin-top: 15px;
+    padding-top: 50px;
+
+}
+
+.element{
+    padding : 10px 20px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;    
+    font-family: Raleway;
+}
+.card-text{
+    padding: 5px 10px;
+    font-size: 1.3em;
+}
+
+.btn-holder{
+    text-align: center;
+    padding: 12px 0; 
+}
+
+.btn-circle{
+    border-radius: 50%;
+    margin:auto;
+    font-size: 2em; 
+    border: 2px solid #414040;    
+}
+
+.rule{
+    margin: 7px 0;
+    padding: 0;
+    height: 2px;
+    background-color: #aaacaf;
+    border-radius: 25px;    
+}
+
+
+
+
+
+
+
+
+
+
+body.overflow-hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
+    overflow: hidden;
+}
+
+.cd-header {
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    top: 0;
+    left: 0;
+    background: #414040;
+    height: 55px;
+    width: 100%;
+    z-index: 3;
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-header {
+        height: 55px;
+        background: transparent;
+        box-shadow: 0;
+    }
+}
+
+.cd-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cd-header.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -55px;
+    box-shadow: 0 5px 10px -5px #333;
+    background-color: #111111;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.cd-header.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.cd-header.menu-is-open {
+    /* add a background color to the header when the navigation is open */
+    background-color: #111111;
+}
+
+.logo-container .logo {
+    overflow: hidden;
+    height: 35px;
+    width: 35px;
+    float: left;
+}
+
+.logo-container .logo img {
+    width: 100%;
+}
+
+.logo-container .brand {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    float: left;
+    /*height: 50px;*/
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    /*width: 60px;*/
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo-container {
+    margin-top: 13px;
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    .logo-container {
+        margin-left: 2em;
+    }
+}
+
+.cd-secondary-nav {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 10em;
+    list-style-type: none;
+    /* hidden on small devices */
+    display: none;
+}
+
+@media (min-width:1024px) and (max-width:1215px) {
+    right: 0em;
+}
+
+.cd-secondary-nav li {
+    display: inline-block;
+    margin-left: 2.2em;
+    font-size: 1.2em;
+    font-family: Raleway;
+    font-weight: 600;
+}
+
+.cd-secondary-nav a {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cd-secondary-nav a:hover {
+    color: #f26522;
+    text-decoration: none;
+    /*#fc4300;*/
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-secondary-nav {
+        display: block;
+    }
+}
+
+.cd-primary-nav-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #414040;
+}
+
+.cd-primary-nav-trigger .cd-menu-text {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* hide the text on small devices */
+    display: none;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon {
+    /* this span is the central line of the menu icon */
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::before,
+.cd-primary-nav-trigger .cd-menu-icon:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    -webkit-transition: -webkit-transform .3s, top .5s, background-color 0s;
+    -moz-transition: -moz-transform .3s, top .5s, background-color 0s;
+    transition: transform .3s, top .5s, background-color 0s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::before {
+    top: -5px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::after {
+    top: 5px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked {
+    background-color: #111111;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before,
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+    background-color: white;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-primary-nav-trigger {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-primary-nav-trigger {
+        width: 100px;
+        padding-left: 1em;
+        background-color: transparent;
+        height: 30px;
+        line-height: 30px;
+        right: 2.2em;
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .cd-primary-nav-trigger .cd-menu-text {
+        display: inline-block;
+    }
+    .cd-primary-nav-trigger .cd-menu-icon {
+        left: auto;
+        right: 0em;
+        -webkit-transform: translateX(0) translateY(-50%);
+        -moz-transform: translateX(0) translateY(-50%);
+        -ms-transform: translateX(0) translateY(-50%);
+        -o-transform: translateX(0) translateY(-50%);
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+.cd-primary-nav {
+    /* by default it's hidden - on top of the viewport */
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #414040;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    z-index: 2;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 100px 0 50px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: auto;
+    /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    list-style-type: none;
+}
+
+.cd-primary-nav li {
+    font-size: 2.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.cd-primary-nav a {
+    display: inline-block;
+    padding: .4em 1em;
+    border-radius: 0.25em;
+    color: #fff;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    transition: background 0.2s;
+}
+
+.no-touch .cd-primary-nav a:hover {
+    background-color: #f26522;
+}
+
+.cd-primary-nav a:hover {
+    color: #f26522;
+    text-decoration: none;
+}
+
+.cd-primary-nav.is-visible {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-primary-nav {
+        padding: 80px 0;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-primary-nav li {
+        font-size: 30px;
+        font-size: 1.875rem;
+    }
+}
