@@ -7,12 +7,14 @@
 }
 
 .element{
-    padding : 10px 20px;
+    /* padding : 10px 20px; */
 }
 
 .card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;    
+    box-shadow: 0 0px 10px 4px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #0ac; */
+    border-radius: 5px; 
+    padding: 1em;   
     font-family: Raleway;
 }
 .card-text{
@@ -21,24 +23,30 @@
 }
 
 .btn-holder{
+    position: absolute;
+    top: 0.1em;
+    right: 0.5em;
+    box-sizing: border-box;
+    font-size: 2em;
     text-align: center;
-    padding: 12px 0; 
-}
-
-.btn-circle{
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin:auto;
-    font-size: 2em; 
-    border: 2px solid #414040;    
 }
 
 .rule{
     margin: 7px 0;
     padding: 0;
-    height: 2px;
-    background-color: #aaacaf;
+    height: 1px;
+    background-color: #eee;
     border-radius: 25px;    
 }
+
+.name {
+    color: #aaa;
+    font-size: 1em;
+}
+
 
 
 
